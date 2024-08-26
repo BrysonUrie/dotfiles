@@ -1,0 +1,24 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  f_tmux.conf:
+    src: tmux.conf
+    dst: ~/.tmux.conf
+  d_tmux:
+    src: tmux
+    dst: ~/.tmux
+  d_nvim:
+    src: config/nvim
+    dst: ~/.config/nvim
+  f_prettierrc:
+    src: prettierrc
+    dst: ~/.prettierrc
+profiles:
+  pop-os:
+    dotfiles:
+    - f_tmux.conf
+    - d_tmux
+    - d_nvim
+    - f_prettierrc
