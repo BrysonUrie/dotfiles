@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 79619ca4a9b01ebf3d1d0071586308878ec2edcc Bryson Urie <brysonurie@gmail.com> 1735328535 -0700	commit (initial): chore: initial commit
+79619ca4a9b01ebf3d1d0071586308878ec2edcc 0000000000000000000000000000000000000000 Bryson Urie <brysonurie@gmail.com> 1735328656 -0700	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 79619ca4a9b01ebf3d1d0071586308878ec2edcc Bryson Urie <brysonurie@gmail.com> 1735328656 -0700	Branch: renamed refs/heads/master to refs/heads/main
+79619ca4a9b01ebf3d1d0071586308878ec2edcc 96acecb04a99b751808704012c6cc4650fe2b121 Bryson Urie <brysonurie@gmail.com> 1735867808 -0700	commit: feat: small changes
+96acecb04a99b751808704012c6cc4650fe2b121 4fbf9df65e6020a16a7b533c7c2540b3c9b279bb Bryson Urie <brysonurie@gmail.com> 1736547321 -0700	commit: add snacks
+4fbf9df65e6020a16a7b533c7c2540b3c9b279bb a858c264adb74cff5f0808010ddd1dae2fc9876f Bryson Urie <brysonurie@gmail.com> 1736547912 -0700	commit: feat: add git functions
+a858c264adb74cff5f0808010ddd1dae2fc9876f 034c0f5f73339978059ece22a72dc9ec1c64f0be Bryson Urie <brysonurie@gmail.com> 1736548205 -0700	commit: fix: remove snacks not in use

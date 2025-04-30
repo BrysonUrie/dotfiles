@@ -1,0 +1,95 @@
+* {
+  border: none;
+  font-size: 18px;
+  font-family: "0xProto Nerd Font";
+  color: #c0caf5;
+  margin: 2px 5px;
+}
+
+window#waybar {
+  background: linear-gradient(90deg, #1f2335, #3b4261);
+  border-radius: 0px 0px 5px 5px;
+  opacity: .9;
+  margin: 0px 5px;
+}
+
+.modules-left,
+.modules-right,
+.modules-center {
+  margin: 0px 10px;
+}
+
+.modules-left > widget,
+.modules-right > widget,
+.modules-center > widget {
+  padding: 0px 10px;
+  margin: 0px 10px;
+}
+
+#battery,
+#custom-clipboard,
+#custom-quit,
+#custom-lock,
+#custom-reboot,
+#custom-colorpicker,
+#custom-powerDraw,
+#bluetooth,
+#pulseaudio,
+#network,
+#disk,
+#memory,
+#backlight,
+#cpu,
+#temperature,
+#custom-weather,
+#idle_inhibitor,
+#jack,
+#tray,
+#window,
+#hardware,
+#workspaces,
+#power-profiles-daemon,
+.session > *,
+#clock {
+  margin: 0 10px;
+}
+
+#workspaces > * {
+  margin: 2px 0px;
+}
+
+#pulseaudio {
+  padding-top: 3px;
+}
+
+#temperature.critical,
+#pulseaudio.muted {
+  color: #ff0000;
+  padding-top: 0px;
+}
+
+#battery.charging {
+  color: #c3e88d;
+}
+
+#battery.warning:not(.charging) {
+  background-color: #ff757f;
+}
+
+#battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
