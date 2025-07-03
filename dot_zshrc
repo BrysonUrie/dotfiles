@@ -28,7 +28,19 @@ export NVM_DIR="$HOME/.nvm"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/.gem/ruby/3.4.0/bin/:$PATH"
+
 . "/home/thomas/.deno/env"
+
+run_my_script() {
+  BUFFER="/home/thomas/tmux-sessionizer.sh"  # Set command line input to your script path
+  zle accept-line                   # Execute it immediately
+}
+zle -N run_my_script                # Register the widget
+
+bindkey '^T' run_my_script          # Bind Ctrl+T to run_my_script
+
 
 echo "Don't forget to YAY!"

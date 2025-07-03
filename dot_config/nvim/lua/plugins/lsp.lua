@@ -5,7 +5,7 @@ return {
       "nvim-telescope/telescope.nvim",
       "nvim-lua/plenary.nvim",
       "folke/lazydev.nvim",
-      "sahgen/blink.cmp",
+      "saghen/blink.cmp",
       ft = "lua",
       opts = {
         library = {
@@ -18,15 +18,18 @@ return {
     servers = {
       lua_ls = {},
       pyright = {},
+      htmx = {},
       html = {},
-      emmet_ls = { filetypes = { "html", "typescriptreact" } },
-      tailwindcss = { filetypes = { "html", "typescriptreact" } },
+      emmet_ls = { filetypes = { "html", "typescriptreact", "templ" } },
+      tailwindcss = { filetypes = { "html", "typescriptreact", "templ" } },
       clangd = {},
       templ = {},
       ts_ls = {},
       eslint = {},
       gopls = {},
       prismals = {},
+      rubocop = {},
+      ruby_lsp = {}
     }
 
   },
