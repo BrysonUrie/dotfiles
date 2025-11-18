@@ -27,6 +27,8 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 -- Deletes without overwriting the default register
 vim.keymap.set({ "n"  }, "<leader>we", '<Cmd>wincmd =<CR>')
 
+vim.keymap.set({ "n"  }, "<leader>w", '<Cmd>wa<CR>')
+
 -- Removes that stupid popup window that shows up when you press q: instead of :q
 -- vim.api.nvim_set_keymap('n', 'q:', '<nop>', { noremap = true, silent = true }) -- Makes q automap lag
 vim.api.nvim_set_keymap('n', 'Q', '<nop>', { noremap = true, silent = true })

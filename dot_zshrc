@@ -1,46 +1,18 @@
-# Add deno completions to search path
-if [[ ":$FPATH:" != *":/home/thomas/.zsh/completions:"* ]]; then export FPATH="/home/thomas/.zsh/completions:$FPATH"; fi
 # Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
+plug "zap-zsh/zap-prompt"
 plug "zsh-users/zsh-syntax-highlighting"
-plug "wintermi/zsh-starship"
-plug "chivalryq/git-alias"
 plug "Aloxaf/fzf-tab"
 
 # Load and initialise completion system
 autoload -Uz compinit
+EDITOR=nvim
 compinit
 
-if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ] && [ "$TERM_PROGRAM" != "vscode" ]; then
-    tmux attach || tmux
-fi
-
-export EDITOR="nvim"
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# bun completions
-[ -s "/home/thomas/.bun/_bun" ] && source "/home/thomas/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/grate:$PATH"
 export PATH="$HOME/go/bin:$PATH"
-export PATH="$HOME/.gem/ruby/3.4.0/bin/:$PATH"
+source /usr/share/nvm/init-nvm.sh
 
-. "/home/thomas/.deno/env"
-
-run_my_script() {
-  BUFFER="/home/thomas/tmux-sessionizer.sh"  # Set command line input to your script path
-  zle accept-line                   # Execute it immediately
-}
-zle -N run_my_script                # Register the widget
-
-bindkey '^T' run_my_script          # Bind Ctrl+T to run_my_script
-
-
-echo "Don't forget to YAY!"
+eval "$(starship init zsh)"
